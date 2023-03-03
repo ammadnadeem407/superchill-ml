@@ -1,8 +1,8 @@
 import os
 import openai
 import json
-
-openai.api_key = "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"
+from tokens import openai_token
+openai.api_key = openai_token
 
 l_genre = ["Romance",    "Fantasy",    "Science fiction",    "Mystery",    "Thriller",
            "Horror",    "Motivational",    "Action",    "Comedy",    "Adventure"]
@@ -53,5 +53,5 @@ for genre in l_genre:
                         responses.append(response_dict)
 
 # Save responses to a JSON file
-with open('dataset_story.json', 'w') as f:
+with open('story_dataset.json', 'w') as f:
     json.dump(responses, f)

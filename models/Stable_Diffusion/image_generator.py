@@ -2,7 +2,8 @@ import torch
 from diffusers import StableDiffusionPipeline
 from PIL import Image
 from IPython.display import display
-from story_generator import text_list
+from models.Davinci import text_list
+from tokens import hugging_token
 # Function for Loading dreamlike-art/dreamlike-photoreal-2.0 Model
 
 
@@ -59,7 +60,6 @@ if __name__ == "__main__":
 
     # Loading the SD Model
     model_id = "dreamlike-art/dreamlike-photoreal-2.0"
-    hugging_token = "ENTER YOU ACCESS TOKEN HERE"
     device = "cuda"
     pipe = load_model(model_id, hugging_token, device,
                       torch_dtype=torch.float16)

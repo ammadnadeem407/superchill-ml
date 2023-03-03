@@ -1,0 +1,1 @@
+"Imagine a {genre}-themed story featuring {main_character_name} who is {age} years old. {input_prompt}. Also include the main character's goal or challenges such as {goals_or_challenges}, any other characters such as {other_characters} if provided. Write out the entire story in great detail:"

@@ -1,7 +1,8 @@
 import openai
-
+from tokens import openai_token
 
 # Function for Generating Story Prompt
+
 
 def get_story_prompt():
     genre = input('Enter the genre: ')
@@ -46,7 +47,6 @@ def clean_text(response_txt):
 if __name__ == "__main__":
     # Generating the story using the above defined Functions
     prompt = get_story_prompt()
-    openai_token = "ENTER YOU ACCESS TOKEN HERE"
     response = generate_text(prompt, openai_token)
     text_list = clean_text(response)
     print(text_list)
